@@ -27,6 +27,7 @@ namespace JMovies.IMDb.Helpers.Movies
             if (releaseDatesNode != null)
             {
                 HtmlNode releaseDatesTableNode = releaseDatesNode.NodesAfterSelf().FirstOrDefault(e => e.Name == "table");
+                if (releaseDatesTableNode == null) return; // 10/02/2023
                 foreach (HtmlNode releaseDateRow in releaseDatesTableNode.QuerySelectorAll("tr"))
                 {
                     ReleaseDate releaseDate = new ReleaseDate();
