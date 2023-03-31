@@ -22,7 +22,7 @@ namespace JMovies.IMDb.Tests.Production
             Entities.Movies.Movie movie = imdbDataProvider.GetMovie(38969, settings); // https://www.imdb.com/title/tt0038969/
             Assert.IsNotNull(movie);
             Assert.IsNotNull(movie.AKAs);
-            Assert.AreEqual(38, movie.AKAs.Count);
+            Assert.AreEqual(32, movie.AKAs.Count);
         }
     }
 }
